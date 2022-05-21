@@ -1,0 +1,68 @@
+html {
+    font-size: 62.5%;
+}
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ul,
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+.link {
+    color: inherit;
+}
+
+$whiteColor: #fff;
+$productColor: #444444;
+$productPriceColor: #d70018;
+$productOldPriceColor: #707070;
+$star: #f59e0b;
+
+$mobile-width: 600px;
+$table-width: 1024px;
+
+$numbers: (1, 2, 3, 4, 5, 6, 7, 8);
+
+//Mixin
+@mixin mobile {
+    @media only screen and (max-width: $mobile-width) {
+        @content;
+    }
+}
+@mixin table {
+    @media only screen and (max-width: $table-width) {
+        @content;
+    }
+}
+
+//Grid
+
+.grid {
+    display: grid;
+}
+
+@each $var in $numbers {
+    .grid-col-#{$var} {
+        grid-template-columns: repeat($var, 1fr);
+    }
+}
+
+@each $var in $numbers {
+    .grid-col-md-#{$var} {
+        @include table {
+            grid-template-columns: repeat($var, 1fr);
+        }
+    }
+}
+@each $var in $numbers {
+    .grid-col-sm-#{$var} {
+        @include mobile {
+            grid-template-columns: repeat($var, 1fr);
+        }
+    }
+}

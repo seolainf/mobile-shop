@@ -1,13 +1,17 @@
+@import "../../scss/index.scss";
 .header {
     position: relative;
     padding: 10px 150px;
-    background-color: #d70018;
+    background-color: $productPriceColor;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    @include table {
+        padding: 10px 50px;
+    }
     &__logo {
-        font-size: 1.5rem;
-        color: white;
+        font-size: 2.5rem;
+        color: $whiteColor;
         text-transform: uppercase;
         &-link {
             color: inherit;
@@ -17,7 +21,7 @@
     &__search {
         position: relative;
         width: 300px;
-        background-color: white;
+        background-color: $whiteColor;
         display: flex;
         align-items: center;
         border-radius: 10px;
@@ -27,7 +31,7 @@
             border-radius: 10px;
             outline: none;
             width: 100%;
-            font-size: 0.9rem;
+            font-size: 1.3rem;
         }
         &-icon {
             position: absolute;
@@ -50,5 +54,29 @@
     &__item {
         display: flex;
         align-items: center;
+        width: 120px;
+        justify-content: center;
+        margin-right: 15px;
+        cursor: pointer;
+        padding: 5px;
+        &:last-child {
+            margin-right: unset;
+        }
+        &-title {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            font-size: 1.3rem;
+            color: $whiteColor;
+            span:nth-child(2) {
+                font-weight: bold;
+            }
+        }
+    }
+    &__icon {
+        font-size: 3rem;
+        margin-right: 10px;
+        color: $whiteColor;
     }
 }

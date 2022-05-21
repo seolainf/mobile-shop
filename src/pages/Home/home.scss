@@ -1,4 +1,12 @@
+@import "../../scss//index.scss";
+
 .home {
     position: relative;
     padding: 0 150px;
+    @include table {
+        padding: 0 50px;
+    }
+    @include mobile {
+        padding: 0 20px;
+    }
 }
