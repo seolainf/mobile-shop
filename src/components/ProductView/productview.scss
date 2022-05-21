@@ -1,0 +1,244 @@
+@import "../../scss/index.scss";
+.productView {
+    position: relative;
+
+    &__heading {
+        position: relative;
+        padding: 15px 150px;
+        font-size: 2rem;
+        font-weight: bold;
+        color: $productColor;
+        border-bottom: 1px solid #d1d5db;
+    }
+    &__container {
+        position: relative;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        padding: 15px 150px;
+    }
+    &__detail {
+        position: relative;
+        width: calc(100% / 3);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding: 10px;
+        &-main {
+            width: 100%;
+            height: 250px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            border: 1px solid #d1d5db;
+            border-radius: 5px;
+            padding: 10px 0;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+        }
+        &-list {
+            position: relative;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        &-img {
+            width: 60px;
+            height: 60px;
+            border: 1px solid #d1d5db;
+            border-radius: 5px;
+            padding: 5px;
+            cursor: pointer;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+        }
+    }
+    &__full {
+        position: relative;
+        width: calc(100% / 3);
+        padding: 10px;
+    }
+    &__percen {
+        font-size: 1.2rem;
+        width: max-content;
+        padding: 5px;
+        margin-bottom: 20px;
+        color: $productPriceColor;
+        border: 1px solid $productPriceColor;
+        border-radius: 5px;
+        background-color: rgba(250, 66, 66, 0.1);
+    }
+    &__price {
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
+        &-curren {
+            font-size: 1.7rem;
+            color: $productPriceColor;
+            font-weight: bold;
+            margin-right: 15px;
+        }
+        &-old {
+            text-decoration: line-through;
+            font-size: 1.5rem;
+            color: $productOldPriceColor;
+        }
+    }
+    &__options {
+        position: relative;
+        &_items {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+        }
+        &-title {
+            font-size: 1.7rem;
+            font-weight: bold;
+            color: $productColor;
+            margin-bottom: 10px;
+        }
+    }
+    &__select {
+        font-size: 1.5rem;
+        color: $productColor;
+        border: 1px solid #d1d5db;
+        padding: 6px;
+        margin: 5px 10px 12px 0;
+        cursor: pointer;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        flex-direction: column;
+        span {
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            color: $productColor;
+            margin-bottom: 5px;
+            font-size: 1.5rem;
+        }
+    }
+
+    &__romote {
+        position: relative;
+        border-radius: 5px;
+        overflow: hidden;
+        border: 1px solid #fee2e2;
+        margin-bottom: 15px;
+        &-title {
+            font-size: 1.7rem;
+            font-weight: bold;
+            background-color: #fee2e2;
+            padding: 10px;
+            color: $productPriceColor;
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        &-list {
+            padding: 7px 10px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            cursor: pointer;
+            span {
+                font-size: 1.4rem;
+                color: $productColor;
+                &:first-child {
+                    background-color: $productPriceColor;
+                    width: 12px;
+                    height: 12px;
+                    padding: 5px;
+                    margin-right: 5px;
+                    color: $whiteColor;
+                    font-size: 1.3rem;
+                    border-radius: 50%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+            }
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+        &-icon {
+            font-size: 1.8rem;
+            margin-right: 5px;
+        }
+        &-hotsale {
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: $productColor;
+            padding: 10px;
+            margin: 10px;
+            background-color: #fee2e2;
+            border-radius: 5px;
+        }
+    }
+    &__buttons {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 20px;
+        button {
+            font-family: "Times New Roman", Times, serif;
+            font-size: 1.7rem;
+            padding: 15px 10px;
+            width: 100%;
+            color: $whiteColor;
+            outline: none;
+            border: none;
+            background-color: $productPriceColor;
+            cursor: pointer;
+        }
+    }
+
+    &__preferential {
+        position: relative;
+        border: 1px solid #d1d5db;
+        border-radius: 5px;
+        overflow: hidden;
+        &-title {
+            padding: 10px;
+            font-size: 1.8rem;
+            text-transform: uppercase;
+            color: $productColor;
+            background-color: #d1d5db;
+            margin: 0;
+        }
+        &-list {
+            padding: 10px;
+            font-size: 1.3rem;
+        }
+        &-item {
+            position: relative;
+            margin-bottom: 10px;
+        }
+        &-icon {
+            width: 15px;
+            height: 15px;
+            font-size: 1.4rem;
+            color: #2ba832;
+            margin-right: 5px;
+        }
+    }
+
+    &__cities {
+        position: relative;
+        width: calc(100% / 3);
+        padding: 10px;
+    }
+}

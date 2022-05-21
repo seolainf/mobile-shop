@@ -9,7 +9,7 @@ const ProductCard = ({ product }) => {
   return (
     <>
       {product.map((item) => (
-        <Link to="/" className="link" key={item.id}>
+        <Link to={`/product/${item.slug}`} className="link" key={item.id}>
           <div className="productCard">
             <div className="productCard__img">
               <img src={item.img[0]} alt="" />
