@@ -7,7 +7,7 @@
     align-items: center;
     justify-content: space-between;
     @include table {
-        padding: 10px 50px;
+        padding: 10px 20px;
     }
     &__logo {
         font-size: 2.5rem;
@@ -15,6 +15,23 @@
         text-transform: uppercase;
         &-link {
             color: inherit;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            img {
+                width: 50px;
+                height: 50px;
+                object-fit: cover;
+                display: none;
+                @include table {
+                    display: flex;
+                }
+            }
+            span {
+                @include table {
+                    display: none;
+                }
+            }
         }
     }
 
@@ -43,6 +60,9 @@
             justify-content: center;
             cursor: pointer;
         }
+        @include table {
+            display: none;
+        }
     }
 
     &__options {
@@ -50,6 +70,9 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+        /*  @include table {
+            display: none;
+        } */
     }
     &__item {
         display: flex;
@@ -59,6 +82,9 @@
         margin-right: 15px;
         cursor: pointer;
         padding: 5px;
+        @include table {
+            width: 70px;
+        }
         &:last-child {
             margin-right: unset;
         }
@@ -72,11 +98,18 @@
             span:nth-child(2) {
                 font-weight: bold;
             }
+            @include table {
+                font-size: 1.2rem;
+            }
         }
     }
     &__icon {
         font-size: 3rem;
         margin-right: 10px;
         color: $whiteColor;
+        @include table {
+            font-size: 2rem;
+            display: none;
+        }
     }
 }

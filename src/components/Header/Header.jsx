@@ -10,7 +10,8 @@ const Header = () => {
     <div className="header">
       <div className="header__logo">
         <Link to="/" className="header__logo-link">
-          Mobile - Shop
+          <span>Mobile - Shop</span>
+          <img src={require("../../assets/images/logo.png")} alt="" />
         </Link>
       </div>
       <div className="header__search">

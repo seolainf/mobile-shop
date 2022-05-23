@@ -431,7 +431,7 @@ const products = [
     name: "Laptop Asus Vivobook 13 Slate Oled T3300KA",
     options: [
       {
-        memories: "Realme 9 Pro",
+        memories: "",
         price: 16790000,
         oldPrice: 17790000,
       },
@@ -566,7 +566,7 @@ const products = [
         oldPrice: 15990000,
       },
     ],
-    colors: ["Bạc"],
+    colors: ["Bạc", "Xám"],
     img: [
       require("../assets/images/dell-insprion-sivel1.jpg"),
       require("../assets/images/dell-insprion-sivel2.jpg"),
@@ -601,7 +601,7 @@ const products = [
         oldPrice: 49990000,
       },
     ],
-    colors: [""],
+    colors: [],
     img: [
       require("../assets/images/imac_21_inch_1.webp"),
       require("../assets/images/imac_21_inch_2.jpg"),
@@ -697,25 +697,36 @@ export const cities = [
     ],
   },
 ];
+
 const getAllProducts = () => products;
 
-const getMobileProducts = (count) => {
+/* const getMobileProducts = (count) => {
   const max = products.length - count;
   const min = 0;
   const start = Math.floor(Math.random() * (max - min) + min);
   return products.slice(start, start + count);
-};
+}; */
 
 const getProductsByCategorys = (type) =>
   products.filter(({ categorys }) => categorys.indexOf(type) > -1);
 
 const getProductsBySlug = (slug) => products.find((e) => e.slug === slug);
 
+const getRandomProductByType = (type, count) => {
+  const allProductType = products.filter(
+    ({ categorys }) => categorys.indexOf(type) > -1
+  );
+  const max = allProductType.length - count;
+  const min = 0;
+  const start = Math.floor(Math.random() * (max - min) + min);
+  return allProductType.slice(start, start + count);
+};
+
 const productsData = {
-  getMobileProducts,
+  getProductsBySlug,
+  getRandomProductByType,
   getProductsByCategorys,
   getAllProducts,
-  getProductsBySlug,
 };
 
 export default productsData;

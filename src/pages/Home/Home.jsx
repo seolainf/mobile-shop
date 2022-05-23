@@ -11,8 +11,8 @@ import ProductCard from "../../components/ProductCard/ProductCard";
 import Grid from "../../components/Grid/Grid";
 
 const Home = () => {
-  const mobileProducts = productsData.getProductsByCategorys("mobile");
-  const laptopProducts = productsData.getProductsByCategorys("laptop");
+  const mobileProducts = productsData.getRandomProductByType("mobile", 5);
+  const laptopProducts = productsData.getRandomProductByType("laptop", 5);
   return (
     <>
       <Header />
