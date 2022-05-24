@@ -1,0 +1,67 @@
+@import "../../scss/index.scss";
+.slides {
+    position: relative;
+    width: 600px;
+    height: 100px;
+    cursor: pointer;
+    transition: opacity 0.7s;
+    border-radius: 10px;
+    overflow: hidden;
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+    & .swiper-button-prev {
+        width: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        left: 0;
+        &::after {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            background-color: $whiteColor;
+            border-radius: 0 50% 50% 0;
+            padding: 10px;
+            color: $productColor;
+        }
+    }
+    & .swiper-button-next {
+        width: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        right: 0;
+        opacity: 0;
+        &::after {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            padding: 10px;
+            background-color: $whiteColor;
+            border-radius: 50% 0 0 50%;
+            color: $productColor;
+        }
+    }
+    & .swiper-pagination-horizontal {
+        opacity: 0;
+    }
+
+    &:hover {
+        & .swiper-pagination-horizontal,
+        & .swiper-button-next,
+        & .swiper-button-prev {
+            opacity: 1;
+        }
+    }
+    & .swiper-pagination-bullet-active {
+        background-color: $productPriceColor;
+    }
+}

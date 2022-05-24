@@ -642,6 +642,7 @@ export const mobileTrademark = [
       "Vivo",
       "Xem tất cả",
     ],
+    type: "mobile",
   },
 ];
 export const laptopTrademark = [
@@ -660,6 +661,7 @@ export const laptopTrademark = [
       "Dell",
       "Xem tất cả",
     ],
+    type: "laptop",
   },
 ];
 
@@ -696,6 +698,33 @@ export const cities = [
       },
     ],
   },
+];
+
+export const mobileCompanies = [
+  require("../assets/images/mobileCompany/apple.png"),
+  require("../assets/images/mobileCompany/asus.png"),
+  require("../assets/images/mobileCompany/nokia.png"),
+  require("../assets/images/mobileCompany/nubia.png"),
+  require("../assets/images/mobileCompany/oneplus.png"),
+  require("../assets/images/mobileCompany/oppo.png"),
+  require("../assets/images/mobileCompany/realme.png"),
+  require("../assets/images/mobileCompany/samsung.png"),
+  require("../assets/images/mobileCompany/vivo.png"),
+  require("../assets/images/mobileCompany/vsmart.png"),
+  require("../assets/images/mobileCompany/xiaomi.png"),
+];
+export const laptopCompanies = [
+  require("../assets/images/laptopCompany/acer.png"),
+  require("../assets/images/laptopCompany/asus.png"),
+  require("../assets/images/laptopCompany/dell.png"),
+  require("../assets/images/laptopCompany/fujitsu.png"),
+  require("../assets/images/laptopCompany/gygabyte.png"),
+  require("../assets/images/laptopCompany/hp.png"),
+  require("../assets/images/laptopCompany/intel.png"),
+  require("../assets/images/laptopCompany/lenovo.png"),
+  require("../assets/images/laptopCompany/lg.png"),
+  require("../assets/images/laptopCompany/macbook.png"),
+  require("../assets/images/laptopCompany/micosoftsurface.png"),
 ];
 
 const getAllProducts = () => products;

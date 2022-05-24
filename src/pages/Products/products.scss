@@ -1,0 +1,10 @@
+.products {
+    position: relative;
+    padding: 20px 150px;
+    &__slides {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}

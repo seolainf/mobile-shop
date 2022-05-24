@@ -13,6 +13,7 @@ import Grid from "../../components/Grid/Grid";
 const Home = () => {
   const mobileProducts = productsData.getRandomProductByType("mobile", 5);
   const laptopProducts = productsData.getRandomProductByType("laptop", 5);
+  //console.log(mobileProducts);
   return (
     <>
       <Header />

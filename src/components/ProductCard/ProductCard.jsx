@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import "./productcard.scss";
 
 const ProductCard = ({ product }) => {
+  //console.log(product);
   return (
     <>
       {product.map((item) => (

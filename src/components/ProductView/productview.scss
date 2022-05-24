@@ -8,7 +8,7 @@
         font-size: 2rem;
         font-weight: bold;
         color: $productColor;
-        border-bottom: 1px solid #d1d5db;
+        border-bottom: 1px solid $borderColor;
         @include table {
             font-size: 1.5rem;
             padding: 15px 20px;
@@ -48,7 +48,7 @@
             align-items: center;
             justify-content: center;
             margin-bottom: 20px;
-            border: 1px solid #d1d5db;
+            border: 1px solid $borderColor;
             border-radius: 5px;
             padding: 10px 0;
             img {
@@ -67,7 +67,7 @@
         &-img {
             width: 60px;
             height: 60px;
-            border: 1px solid #d1d5db;
+            border: 1px solid $borderColor;
             border-radius: 5px;
             padding: 5px;
             cursor: pointer;
@@ -131,7 +131,7 @@
         position: relative;
         font-size: 1.5rem;
         color: $productColor;
-        border: 1px solid #d1d5db;
+        border: 1px solid $borderColor;
         padding: 6px;
         margin: 5px 10px 12px 0;
         cursor: pointer;
@@ -174,12 +174,12 @@
         position: relative;
         border-radius: 5px;
         overflow: hidden;
-        border: 1px solid #fee2e2;
+        border: 1px solid $borderColor1;
         margin-bottom: 15px;
         &-title {
             font-size: 1.7rem;
             font-weight: bold;
-            background-color: #fee2e2;
+            background-color: $borderColor1;
             padding: 10px;
             color: $productPriceColor;
             display: flex;
@@ -227,7 +227,7 @@
             color: $productColor;
             padding: 10px;
             margin: 10px;
-            background-color: #fee2e2;
+            background-color: $borderColor1;
             border-radius: 5px;
         }
     }
@@ -262,7 +262,7 @@
 
     &__preferential {
         position: relative;
-        border: 1px solid #d1d5db;
+        border: 1px solid $borderColor;
         border-radius: 5px;
         overflow: hidden;
         &-title {
@@ -270,7 +270,7 @@
             font-size: 1.8rem;
             text-transform: uppercase;
             color: $productColor;
-            background-color: #d1d5db;
+            background-color: $borderColor;
             margin: 0;
         }
         &-list {
@@ -294,7 +294,7 @@
         position: relative;
         width: calc(100% / 3);
         padding: 10px;
-        border: 1px solid #d1d5db;
+        border: 1px solid $borderColor;
         border-radius: 7px;
         @include table {
             width: 100%;
